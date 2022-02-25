@@ -68,7 +68,5 @@ An experiment in creating a windowing system within SwiftUI. However, since the 
 - Helped other contributors fix the implementation of detecting the display scaling of a screen. 
   - [#1](https://github.com/leezer3/opentk/pull/1)
   - [#2](https://github.com/leezer3/opentk/pull/2)
-<!-- ### Atom
-- Replaced the  -->
 
 [Privacy Policy for Apps](Privacy.md)
