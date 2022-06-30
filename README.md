@@ -22,13 +22,18 @@ An iOS, iPadOS and Mac Catalyst app designed to help students change their test 
 <table>
     <tr>
         <td>
-        <img src="testTimer1.png">
+        <img src="images/testTimer1.png">
         </td>
         <td>
-        <img src="testTimer2.png">
+        <img src="images/testTimer2.png">
         </td>
     </tr>
 </table>
+
+### [Low Power Mode Toggler](binaries/Low%20Power%20Mode%20Toggler.zip)
+A macOS Menu Bar Extra App that allows MacBook owners to toggle Low Power Mode from the menu bar without having to dig through System Preferences for the Low Power Mode toggle. Also supports notifying the user that they can enable Low Power Mode when the MacBook goes down to 20% health (if notifications are enabled).
+
+![](images/lowPowerModeToggler.png)
 
 ### Tide Tracker
 A soon to be released app for iOS and iPadOS devices specifically designed for watercraft users to know tide conditions and when the tides will change.
@@ -36,10 +41,10 @@ A soon to be released app for iOS and iPadOS devices specifically designed for w
 <table>
     <tr>
         <td>
-        <img src="tides1.png">
+        <img src="images/tides1.png">
         </td>
         <td>
-        <img src="tides2.png">
+        <img src="images/tides2.png">
         </td>
     </tr>
 </table>
@@ -47,16 +52,16 @@ A soon to be released app for iOS and iPadOS devices specifically designed for w
 ### Roblox Asset Uploader
 Another soon to be released app for iOS and iPadOS devices targeted at allowing users to upload assets such as decals to the Roblox library through a native, robust user interface.
 
-![](robloxAssetUploader.png)
+![](images/robloxAssetUploader.png)
 
 ### [Roblox Studio Mobile](https://github.com/andylin2004/RobloxStudioMobile)
 A side project to attempt to port features of Roblox Studio onto the iPadOS platform.
 
-![](robloxStudioMobile.png)
+![](images/robloxStudioMobile.png)
 
 ### [windows-swiftui](https://github.com/andylin2004/windows-swiftui)
 An experiment in creating a windowing system within SwiftUI. However, since the App Store doesn't allow for individual windows within an app itself, this will probably never be used to create an actual app.
-![](windows-swiftui.png)
+![](images/windows-swiftui.png)
 
 ## Open Source Projects I Contributed to
 
@@ -64,6 +69,7 @@ An experiment in creating a windowing system within SwiftUI. However, since the 
 ### OpenBVE
 - [Improved the handling of setting the size of the simulator window.](https://github.com/leezer3/OpenBVE/pull/692)
   - The PR was closed but the feature was [implemented](https://openbve-project.net/intro/v1.8.2.0/) through a proper NuGet package since macOS doesn't support compilation of packages.
+
 ### OpenTK
 - Helped other contributors fix the implementation of detecting the display scaling of a screen. 
   - [#1](https://github.com/leezer3/opentk/pull/1)
