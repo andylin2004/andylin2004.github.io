@@ -11,8 +11,15 @@ I'm Andy, a student at Stuyvesant High School and developer from New York, NY. T
 - [Software Development](https://github.com/andylin2004/SoftDevWorkshop)
   - [Project 0 (blog site using Flask, SQLite)](https://github.com/andylin2004/softdev-P00)
   - [Project 1 (dashboard site with a CSS framework)](https://github.com/markzhu926/Team-Ye_Fanboys-p01)
+  - [Project 2 (using HTML and JS canvas to make a game)](https://github.com/kcao20/battleship)
+  - [Project 3 (Swift, SwiftUI, and iOS app development Ted talk)](https://github.com/andylin2004/SoftDevSwiftDemo)
+  - [Project 4 (Final Project, Walmart Among Us game)](https://github.com/JustinMorrill/NastyFightingTurtles)
 - [Systems Level Programming](https://github.com/andylin2004-systems)
   - [Final Project](https://github.com/ywu20/sockemfia)
+- [Computer Graphics](https://github.com/andylin2004-graphics)
+  - [Final Project](https://github.com/andylin2004-graphics/12_final)
+- [Cybersecurity](https://github.com/andylin2004/Cybersecurity_2022)
+  - [Final Presentation](https://github.com/AAWorks/hill-cipher)
 
 ## Portfolio of Personal Projects
 
