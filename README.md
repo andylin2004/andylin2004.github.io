@@ -6,6 +6,7 @@ I'm Andy, a student at Stuyvesant High School and developer from New York, NY. T
 
 ## Coursework
 
+### High School
 - Stuyvesant High School's Annual Computer Science class
 - [APCS AB](https://github.com/andylin2004-apcs)
 - [Software Development](https://github.com/andylin2004/SoftDevWorkshop)
@@ -20,6 +21,8 @@ I'm Andy, a student at Stuyvesant High School and developer from New York, NY. T
   - [Final Project](https://github.com/andylin2004-graphics/12_final)
 - [Cybersecurity](https://github.com/andylin2004/Cybersecurity_2022)
   - [Final Presentation](https://github.com/AAWorks/hill-cipher)
+### College
+- CS-UY 1134
 
 ## Portfolio of Personal Projects
 
