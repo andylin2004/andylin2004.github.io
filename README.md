@@ -12,6 +12,7 @@ I'm Andy, a student majoring in Computer Science at New York University, alumni 
 
 ### College
 - CS-UY 1134
+
 ### High School
 - Stuyvesant High School's Annual Computer Science class
 - [APCS AB](https://github.com/andylin2004-apcs)
