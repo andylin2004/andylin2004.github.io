@@ -4,6 +4,9 @@
 
 I'm Andy, a student majoring in Computer Science at New York University, alumni of Stuyvesant High School (class of 2022), and developer from New York, NY. The majority of my repos here as of right now are from my high school and college computer science classes, although I do have a few side projects here. I typically program in Swift, Python, and Rust, although I have experience programming in Java, C, C#, and Luau (Roblox's fork of Lua).
 
+## LinkedIn
+## Resume
+
 ## Coursework
 
 ### High School
@@ -21,10 +24,14 @@ I'm Andy, a student majoring in Computer Science at New York University, alumni 
   - [Final Project](https://github.com/andylin2004-graphics/12_final)
 - [Cybersecurity](https://github.com/andylin2004/Cybersecurity_2022)
   - [Final Presentation](https://github.com/AAWorks/hill-cipher)
+
 ### College
 - CS-UY 1134
 
-## Portfolio of Personal Projects
+## Portfolio of Projects
+
+### Haptiphones
+A RAD project done as part of EG1004's Semester Long Design Project.
 
 ### [Test Timer](https://apps.apple.com/us/app/test-timer-monitor-your-time/id1568837510)
 An iOS, iPadOS and Mac Catalyst app designed to help students change their test taking habits for tests where people cannot go back to a question once the question is answered.
