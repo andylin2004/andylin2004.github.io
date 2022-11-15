@@ -1,7 +1,7 @@
 # [Andy Lin](https://github.com/andylin2004)
 
 ## [LinkedIn](https://www.linkedin.com/in/andylin2004/)
-## [Portfolio](Portfolio.md)
+## [Project Portfolio](Portfolio.md)
 ## [Resume](Resume.pdf)
 
 ![](images/headshot.jpeg)

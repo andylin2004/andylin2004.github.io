@@ -1,6 +1,6 @@
 # [Andy Lin](https://github.com/andylin2004)
 
-## Portfolio
+## Project Portfolio
 
 ### Haptiphones
 A RAD project done as part of EG1004's Semester Long Design Project.
