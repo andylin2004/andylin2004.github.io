@@ -2,8 +2,22 @@
 
 ## Portfolio
 
-### Haptiphones
-A RAD project done as part of EG1004's Semester Long Design Project.
+### [Haptiphones](https://github.com/andylin2004/sldp-audio-processing)
+A RAD project targeted at deaf people created for EG1004's Semester Long Design Project. This project involved adding a set of vibration motors to a preexisting pair of headphones, connecting the motors to a power source and a Raspberry Pi 4, and programming the Raspberry Pi so that it could process music sent to the Raspberry Pi and make the vibration motors vibrate to the music.
+
+### StickerCord
+An iOS, iPadOS, and Mac app that allows users to use a Discord server’s stickers and emojis outside the Discord app. On iOS and iPadOS, users can also use the emojis and stickers as iMessage stickers.
+
+<table>
+    <tr>
+        <td>
+        <img src="images/stickercordApp.png">
+        </td>
+        <td>
+        <img src="images/stickercordiMessage.png">
+        </td>
+    </tr>
+</table> 
 
 ### [Test Timer](https://apps.apple.com/us/app/test-timer-monitor-your-time/id1568837510)
 An iOS, iPadOS and Mac Catalyst app designed to help students change their test taking habits for tests where people cannot go back to a question once the question is answered.
