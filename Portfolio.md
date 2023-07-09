@@ -3,22 +3,12 @@
 ## Project Portfolio
 
 ### [Haptiphones](https://github.com/andylin2004/sldp-audio-processing)
-A RAD project targeted at deaf people created for EG1004's Semester Long Design Project. This project involved adding a set of vibration motors to a preexisting pair of headphones, connecting the motors to a power source and a Raspberry Pi 4, and programming the Raspberry Pi so that it could process music sent to the Raspberry Pi and make the vibration motors vibrate to the music.
+A RAD project targeted at deaf people created for EG1004's Semester Long Design Project. This project involved adding a set of vibration motors to a preexisting pair of headphones, connecting the motors to a power source and a Raspberry Pi 4, and programming the Raspberry Pi so that it could process music sent to the Raspberry Pi and make the vibration motors vibrate to the currently playing music.
 
-<!-- ### [StickerCord](https://apps.apple.com/us/app/stickercord/id1661981599) -->
-### StickerCord
-An iOS, iPadOS, and Mac app that allows users to use a Discord server’s stickers and emojis outside the Discord app. On iOS and iPadOS, users can also use the emojis and stickers as iMessage stickers.
+### [Tides App](https://apps.apple.com/us/app/tides-high-and-low-tide-info/id1583238971)
+An app for iOS, iPadOS, and watchOS devices specifically designed for watercraft users to know tide conditions and when the tides will change. Widgets are also available for users to view this information on their Home Screen or Lock Screen (on iOS and iPadOS) or on their watch face (on watchOS).
 
-<table>
-    <tr>
-        <td>
-        <img src="images/stickercordApp.png">
-        </td>
-        <td>
-        <img src="images/stickercordiMessage.png">
-        </td>
-    </tr>
-</table> 
+![](images/tides.png)
 
 ### [Test Timer](https://apps.apple.com/us/app/test-timer-monitor-your-time/id1568837510)
 An iOS, iPadOS and Mac Catalyst app designed to help students change their test taking habits for tests where people cannot go back to a question once the question is answered.
@@ -39,19 +29,20 @@ A macOS Menu Bar Extra App that allows MacBook owners to toggle Low Power Mode f
 
 ![](images/lowPowerModeToggler.png)
 
-### Tide Tracker
-A soon to be released app for iOS and iPadOS devices specifically designed for watercraft users to know tide conditions and when the tides will change.
+<!-- ### [StickerCord](https://apps.apple.com/us/app/stickercord/id1661981599) -->
+### StickerCord
+An iOS, iPadOS, and Mac app that allows users to use a Discord server’s stickers and emojis outside the Discord app. On iOS and iPadOS, users can also use the emojis and stickers as iMessage stickers.
 
 <table>
     <tr>
         <td>
-        <img src="images/tides1.png">
+        <img src="images/stickercordApp.png">
         </td>
         <td>
-        <img src="images/tides2.png">
+        <img src="images/stickercordiMessage.png">
         </td>
     </tr>
-</table>
+</table> 
 
 ### Roblox Asset Uploader
 Another soon to be released app for iOS and iPadOS devices targeted at allowing users to upload assets such as decals to the Roblox library through a native, robust user interface.
