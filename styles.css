@@ -3,6 +3,14 @@ body {
     background-color: #A7CCED;
 }
 
+body h1 {
+    font-size: 40pt;
+}
+
+body #navbar h1 {
+    font-size: 28pt;
+}
+
 body h2 {
     font-size: 28pt;
 }
