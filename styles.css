@@ -87,3 +87,27 @@ h5 {
     padding-bottom: 20px;
     bottom: 0;
 }
+
+.flexbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.flexbox img {
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#main-ctn > img.shrinkdown {
+    max-height: 500px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main-ctn > img.roundedcorner {
+    clip-path: inset(0 round 40px);
+}
