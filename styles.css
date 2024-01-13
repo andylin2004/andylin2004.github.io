@@ -134,3 +134,33 @@ h5 {
     margin-right: 20px;
     width: 20pt;
 }
+
+@media only screen and (max-width: 500px) {
+    #intro {
+        display:inline;
+    }
+
+    #intro * {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #intro > img {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    ul > li > b {
+        display: block;
+    }
+
+    h3 ~ i {
+        display: block;
+        font-size: large;
+        font-style: normal;
+        font-weight: bold;
+    }
+}
