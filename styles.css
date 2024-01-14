@@ -164,19 +164,37 @@ h5 {
     #navbar {
         text-align: center;
         display: grid;
-        grid-template-columns: 1fr 20fr 1fr;
+        grid-template-columns: repeat(22, 1fr);
+        grid-template-rows: 48px 1fr;
+        height: auto;
+        min-height: 0px;
+        transition: all 1s;
     }
 
     #navbar #show-menu:has(#show-menu-btn) ~ #navbar-links {
-        display: none;
+        /* display: none; */
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+        max-height: 0px;
+        transition: opacity 0s;
+
+        transition-delay: 0s;
     }
 
     #navbar #show-menu:has(#show-menu-btn:checked) ~ #navbar-links {
-        display: block;
-        grid-row-start: 1;
-        grid-row-end: 1;
+        display: grid;
+        grid-row-start: 2;
+        grid-row-end: 2;
         grid-column-start: 1;
         grid-column-end: 20;
+        text-align: left;
+        margin-bottom: auto;
+        margin-top: 0;
+
+        opacity: 1;
+        transition: opacity 0.5s;
+        transition-delay: 0.5s;
     }
 
     #show-menu #show-menu-btn ~ label {
@@ -196,19 +214,30 @@ h5 {
     }
 
     #navbar h1 {
-        grid-column-start: 1;
-        grid-column-end: 20;
+        grid-column-start: 2;
+        grid-column-end: 21;
         grid-row-start: 0;
         grid-row-end: 0;
         text-align: center;
     }
 
+    #navbar:has(#show-menu #show-menu-btn:checked) {
+        min-height: 100vh;
+    }
+
     #show-menu {
         display: block;
-        grid-column-start: 0;
+        grid-column-start: 1;
         grid-column-end: 1;
-        grid-row-start: 0;
+        grid-row-start: 1;
         grid-row-end: 1;
+    }
+
+    #navbar-links a {
+        font-size: large;
+        margin-left: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }
 
