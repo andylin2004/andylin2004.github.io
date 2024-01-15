@@ -17,6 +17,7 @@ window.addEventListener("resize", function () {
     this.clearTimeout(timeoutFuncID);
     if (this.window.innerWidth > 500) {
         navbar_links.classList.add("supress-animations");
+        document.getElementById("show-menu-btn").checked = false;
     } else {
         timeoutFuncID = setTimeout(function () {
             navbar_links.classList.remove("supress-animations");
