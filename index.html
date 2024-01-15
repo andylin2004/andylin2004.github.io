@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Andy Lin's Portfolio</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#304D6D"/>
         <link rel="stylesheet" type="text/css" href="styles.css">
         <link rel="stylesheet" type="text/css" href="reset.css">
@@ -9,8 +11,16 @@
     </head>
     <body>
         <div id="navbar">
+            <div id="show-menu">
+                <input type="checkbox" id="show-menu-btn" name="show_menu">
+                <div id="menu-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                </div>
+            </div>
             <h1><a href="index.html">Andy Lin</a></h1>
-            <div id="navbar-links">
+            <h1 id="dummy"></h1>
+            <div id="navbar-links" class="">
                 <a href="projects.html">Projects</a>
                 <a href="AndyLin_Resume.pdf">Resume</a>
             </div>
@@ -25,7 +35,7 @@
             </div>
             <h2>Education History</h2>
             <h3 class="nobreak">New York University</h3>
-            <h></h3><i>August 2022 - expected December 2025</i>
+            <i>August 2022 - expected December 2025</i>
             <h4><b>Bachelors of Science in Computer Science and Integrated Design and Media</b></h4>
             <h5>Courses Taken:</h5>
             <ul>
