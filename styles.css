@@ -231,9 +231,9 @@ h5 {
         transition: all 0.4s;
     }
 
-    /* #show-menu #show-menu-btn:checked ~ #menu-lines > .line {
-        
-    } */
+    #navbar #navbar-links a {
+        margin-left: 0px;
+    }
 
     #show-menu #show-menu-btn:checked ~ #menu-lines > .line.line1 {
         transform: rotate(45deg) translateY(5px) translateX(2px);
