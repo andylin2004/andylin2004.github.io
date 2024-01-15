@@ -1,5 +1,26 @@
-document.addEventListener("DOMContentLoaded", function() {
+let timeoutFuncID;
+
+document.addEventListener("DOMContentLoaded", function () {
     let copyrightYear = document.getElementById("copyright_year");
 
-    copyrightYear.innerText = new Date().getFullYear()
+    copyrightYear.innerText = new Date().getFullYear();
+
+    let navbar_links = document.getElementById("navbar-links");
+    if (window.innerWidth > 500) {
+        navbar_links.classList.add("supress-animations");
+    }
+})
+
+window.addEventListener("resize", function () {
+    let navbar_links = this.document.getElementById("navbar-links");
+
+    this.clearTimeout(timeoutFuncID);
+    if (this.window.innerWidth > 500) {
+        navbar_links.classList.add("supress-animations");
+    } else {
+        timeoutFuncID = setTimeout(function () {
+            navbar_links.classList.remove("supress-animations");
+        }, 500);
+    }
+    
 })
