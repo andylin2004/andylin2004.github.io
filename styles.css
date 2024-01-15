@@ -272,6 +272,11 @@ h5 {
         padding-left: 0;
         margin-right: 0;
     }
+
+    body:has(#navbar #show-menu #show-menu-btn:checked) {
+        background-color: #304D6D;
+        transition-delay: 0.4s;
+    }
 }
 
 @media only screen and (max-width: 600px) {
