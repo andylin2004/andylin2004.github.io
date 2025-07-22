@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,9 +35,6 @@
             <br>
 
             <h3>Personal Projects</h3>
-
-            <a href="https://apps.apple.com/us/app/tides-high-and-low-tide-info/id1583238971"><h3>Tides App</h3></a>
-            
             {% for project in site.projects %}
             {% if project.link %}
             <a href={{ project.link }}><h3>{{ project.title }}</h3></a>
