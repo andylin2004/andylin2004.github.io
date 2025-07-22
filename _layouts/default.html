@@ -2,7 +2,11 @@
 <html>
 
 <head>
+    {% if page.title %}
     <title>{{ page.title }} – Andy Lin</title>
+    {% else %}
+    <title>Andy Lin</title>
+    {% endif %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#304D6D" />
