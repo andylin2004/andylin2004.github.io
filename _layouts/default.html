@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% if page.title %}
+    <title>{{ page.title }} – Andy Lin</title>
+    {% else %}
+    <title>Andy Lin</title>
+    {% endif %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#304D6D" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="show-menu">
+            <input type="checkbox" id="show-menu-btn" name="show_menu">
+            <div id="menu-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+            </div>
+        </div>
+        <h1><a href="index.html">Andy Lin</a></h1>
+        <h1 id="dummy"></h1>
+        <div id="navbar-links" class="">
+            <a href="projects.html">Projects</a>
+            <a href="AndyLin_Resume.pdf">Resume</a>
+        </div>
+    </div>
+    {{ content }}
+    <div id="bottom-bar">
+        <p><i>Copyright Andy Lin <span id="copyright_year">2024</span></i></p>
+        <div>
+            <a href="http://github.com/andylin2004"><img src="images/github-mark-white.png"></a>
+            <a href="https://mastodon.social/@andylin"><img src="images/mastodon-logo-white.svg"></a>
+            <a href="https://linkedin.com/in/andylin2004"><img src="images/linkedin-logo.png"></a>
+        </div>
+    </div>
+</body>
+</html>

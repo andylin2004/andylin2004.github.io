@@ -1,111 +1,53 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Projects – Andy Lin's Portfolio</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-        <meta name="theme-color" content="#304D6D"/>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <link rel="stylesheet" type="text/css" href="reset.css">
-        <script type="text/javascript" src="script.js"></script>
-    </head>
-    <body>
-        <div id="navbar">
-            <div id="show-menu">
-                <input type="checkbox" id="show-menu-btn" name="show_menu">
-                <div id="menu-lines">
-                    <span class="line line1"></span>
-                    <span class="line line2"></span>
-                </div>
-            </div>
-            <h1><a href="index.html">Andy Lin</a></h1>
-            <h1 id="dummy"></h1>
-            <div id="navbar-links" class="">
-                <a href="projects.html">Projects</a>
-                <a href="AndyLin_Resume.pdf">Resume</a>
-            </div>
-        </div>
-        <div id="main-ctn">
-            <h1>Projects</h1>
-            <h3><i>A list of projects that I have created over the years</i></h3>
-            <br>
+---
+layout: default
+title: Projects
+---
 
-            <h3>Personal Projects</h3>
+<div id="main-ctn">
+  <h1>Projects</h1>
+  <h3>
+    <i>A list of projects that I have created over the years</i>
+  </h3>
+  <br>
 
-            <a href="https://apps.apple.com/us/app/tides-high-and-low-tide-info/id1583238971"><h3>Tides App</h3></a>
-            An app for iOS, iPadOS, macOS, visionOS, and watchOS devices specifically designed for watercraft users to know tide conditions and when the tides will change. Widgets are also available for users to view this information on their Home Screen or Lock Screen (on iOS and iPadOS) or on their watch face (on watchOS).
-            <img src="images/tides.png">
-            <img src="images/tides_visionos.png" class="roundedcorner">
+  {% assign academic_projects = site.projects | where: "subcategory", "academic" %}
+  {% assign personal_projects = site.projects | where: "subcategory", "personal" %}
+  {% assign open_source_projects = site.projects | where: "subcategory", "open-source" %}
+  <h3>Personal Projects</h3>
+  {% for project in personal_projects %}
+    {% if project.link %}
+      <a href={{ project.link }}>
+        <h4>{{ project.title }}</h4>
+      </a>
+    {% else %}
+      <h4>{{ project.title }}</h4>
+    {% endif %}
+    {{ project.content }}
+  {% endfor %}
 
-            <a href="https://apps.apple.com/us/app/test-timer-monitor-your-time/id1568837510"><h3>Test Timer</h3></a>
-            An iOS, iPadOS and Mac Catalyst app designed to help students change their test taking habits for tests where people cannot go back to a question once the question is answered.
-            <div class="grid-img-ctr">
-                <img src="images/testTimer1.png">
-                <img src="images/testTimer2.png">
-            </div>
-            <img src="images/testtimer_visionos.png" class="roundedcorner">
+  <h3>Open Source Projects I Contributed to</h3>
 
-            <a href="binaries/Low%20Power%20Mode%20Toggler.zip"><h3>Low Power Mode Toggler</h3></a>
-            A macOS Menu Bar Extra App that allows MacBook owners to toggle Low Power Mode from the menu bar without having to dig through System Preferences for the Low Power Mode toggle. Also supports notifying the user that they can enable Low Power Mode when the MacBook goes down to 20% health (if notifications are enabled).
+  {% for project in open_source_projects %}
+    {% if project.link %}
+      <a href={{ project.link }}>
+        <h4>{{ project.title }}</h4>
+      </a>
+    {% else %}
+      <h4>{{ project.title }}</h4>
+    {% endif %}
+    {{ project.content }}
+  {% endfor %}
 
-            <img src="images/lowPowerModeToggler.png" class="roundedcorner">
+  <h3>Academic Projects</h3>
 
-            <!-- <a href="https://apps.apple.com/us/app/stickercord/id1661981599"><h3>StickerCord</h3></a> -->
-            <h3>StickerCord</h3>
-            An iOS, iPadOS, and Mac app that allows users to use a Discord server’s stickers and emojis outside the Discord app. On iOS and iPadOS, users can also use the emojis and stickers as iMessage stickers.
-
-            <div class="grid-img-ctr">
-                <img src="images/stickercordApp.png">
-                <img src="images/stickercordiMessage.png">
-            </div>
-
-            <h3>Roblox Asset Uploader</h3>
-            An app for iOS and iPadOS devices targeted at allowing users to upload assets such as decals to the Roblox library through a native, robust user interface.
-
-            <img src="images/robloxAssetUploader.png" class="shrinkdown">
-
-            <a href="https://github.com/andylin2004/RobloxStudioMobile"><h3>Roblox Studio Mobile</h3></a>
-            A side project to attempt to port features of Roblox Studio onto the iPadOS platform.
-
-            <img src="images/robloxStudioMobile.png">
-
-            <a href="https://github.com/andylin2004/windows-swiftui"><h3>windows-swiftui</h3></a>
-            An experiment in creating a windowing system within a SwiftUI app.
-            <img src="images/windows-swiftui.png" class="shrinkdown">
-
-            <h3>Open Source Projects I Contributed to</h3>
-
-            <h4>Reminders Menu Bar</h4>
-
-            <ul>
-                <li><a href="https://github.com/DamascenoRafael/reminders-menubar/pull/80">Contributed to implementing a way to set a due date and time to a reminder.</a></li>
-                <li><a href="">Fixed a visual display bug that caused low visibility that occured under certain settings.</a></li>
-            </ul>
-            
-            <h4>OpenBVE</h4>
-            <p><a href="https://github.com/leezer3/OpenBVE/pull/692">Improved the handling of setting the size of the simulator window</a></p>
-            <i><p>The PR was closed but the feature was <a href="https://openbve-project.net/intro/v1.8.2.0/">implemented</a> through a proper NuGet package since macOS doesn't support compilation of NuGet packages.</p></i>
-
-            <h4>OpenTK</h4>
-            Assisted other contributors fix the implementation of detecting the display scaling of a screen. 
-            <ul>
-                <li><a href="https://github.com/leezer3/opentk/pull/1">#1</a></li>
-                <li><a href="https://github.com/leezer3/opentk/pull/2">#2</a></li>
-            </ul>
-
-            <h3>Academic Projects</h3>
-
-            <a href="https://github.com/andylin2004/sldp-audio-processing"><h3>Haptiphones</h3></a>
-            A project targeted at deaf people, but useful to anyone, created for EG1004's Semester Long Design Project. This project involved adding a set of vibration motors to a preexisting pair of headphones, connecting the motors to a power source and a Raspberry Pi 4, and programming the Raspberry Pi so that it could process music sent to the Raspberry Pi and make the vibration motors vibrate to the currently playing music.
-            
-        </div>
-        <div id="bottom-bar">
-            <p><i>Copyright Andy Lin <span id="copyright_year">2024</span></i></p>
-            <div>
-                <a href="http://github.com/andylin2004"><img src="images/github-mark-white.png"></a>
-                <a href="https://mastodon.social/@andylin"><img src="images/mastodon-logo-white.svg"></a>
-                <a href="https://linkedin.com/in/andylin2004"><img src="images/linkedin-logo.png"></a>
-            </div>
-        </div>
-    </body>
-</html>
+  {% for project in academic_projects %}
+    {% if project.link %}
+      <a href={{ project.link }}>
+        <h4>{{ project.title }}</h4>
+      </a>
+    {% else %}
+      <h4>{{ project.title }}</h4>
+    {% endif %}
+    {{ project.content }}
+  {% endfor %}
+</div>
