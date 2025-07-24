@@ -128,14 +128,14 @@ h5 {
     margin-bottom: 10px;
 }
 
-#main-ctn > img.shrinkdown {
+.project_item img.shrinkdown {
     max-height: 500px;
     width: auto;
     margin-left: auto;
     margin-right: auto;
 }
 
-#main-ctn > img.roundedcorner {
+.project_item img.roundedcorner {
     clip-path: inset(0 round 40px);
 }
 
