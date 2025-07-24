@@ -1,0 +1,12 @@
+{% for project in include.projects %}
+  <div class="project_item">
+    {% if project.link %}
+      <a href="{{ project.link }}">
+        <h4>{{ project.title }}</h4>
+      </a>
+    {% else %}
+      <h4>{{ project.title }}</h4>
+    {% endif %}
+    {{ project.content }}
+  </div>
+{% endfor %}
