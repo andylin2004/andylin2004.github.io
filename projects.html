@@ -15,39 +15,45 @@ title: Projects
   {% assign open_source_projects = site.projects | where: "subcategory", "open-source" %}
   <h3>Personal Projects</h3>
   {% for project in personal_projects %}
-    {% if project.link %}
-      <a href={{ project.link }}>
+    <div class="project_item">
+      {% if project.link %}
+        <a href={{ project.link }}>
+          <h4>{{ project.title }}</h4>
+        </a>
+      {% else %}
         <h4>{{ project.title }}</h4>
-      </a>
-    {% else %}
-      <h4>{{ project.title }}</h4>
-    {% endif %}
-    {{ project.content }}
+      {% endif %}
+      {{ project.content }}
+    </div>
   {% endfor %}
 
-  <h3>Open Source Projects I Contributed to</h3>
+  <h3>Open Source Contributions</h3>
 
   {% for project in open_source_projects %}
-    {% if project.link %}
-      <a href={{ project.link }}>
+    <div class="project_item">
+      {% if project.link %}
+        <a href={{ project.link }}>
+          <h4>{{ project.title }}</h4>
+        </a>
+      {% else %}
         <h4>{{ project.title }}</h4>
-      </a>
-    {% else %}
-      <h4>{{ project.title }}</h4>
-    {% endif %}
-    {{ project.content }}
+      {% endif %}
+      {{ project.content }}
+    </div>
   {% endfor %}
 
   <h3>Academic Projects</h3>
 
   {% for project in academic_projects %}
-    {% if project.link %}
-      <a href={{ project.link }}>
+    <div class="project_item">
+      {% if project.link %}
+        <a href={{ project.link }}>
+          <h4>{{ project.title }}</h4>
+        </a>
+      {% else %}
         <h4>{{ project.title }}</h4>
-      </a>
-    {% else %}
-      <h4>{{ project.title }}</h4>
-    {% endif %}
-    {{ project.content }}
+      {% endif %}
+      {{ project.content }}
+    </div>
   {% endfor %}
 </div>
