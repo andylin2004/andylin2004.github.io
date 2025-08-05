@@ -307,3 +307,15 @@ h5 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.education {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+    align-self: center;
+}
