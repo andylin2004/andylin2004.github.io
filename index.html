@@ -18,7 +18,7 @@ layout: default
     <h2>Education History</h2>
     {% for school in site.education %}
     <h3>{{ school.name }}</h3>
-    <i>{{ school.start }} - {{ school.end }}</i>
+    <b>{{ school.start }} - {{ school.end }}</b>
     {{ school.content }}
     {% endfor %}
 </div>
