@@ -290,13 +290,6 @@ h5 {
     ul > li > b {
         display: block;
     }
-
-    h3 ~ i {
-        display: block;
-        font-size: large;
-        font-style: normal;
-        font-weight: bold;
-    }
 }
 
 .project_item {
