@@ -1,0 +1,10 @@
+{% for experience in include.experiences %}
+<div class="experience">
+    <img src="images/{{ experience.logo }}" class="logo">
+    <div>
+        <h3>{{ experience.name }}</h3>
+        <b>{{ experience.start }} - {{ experience.end }}</b>
+        {{ experience.content }}
+    </div>
+</div>
+{% endfor %}

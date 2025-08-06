@@ -14,15 +14,14 @@ layout: default
             <p>Software engineering is my art form, where code is my paintbrush and device screens are my canvas to bring ideas to life. I love building and creating interactive software that people can engage with and react to, using feedback to refine and enhance my work. I have independently created and maintained several iOS apps available on the App Store. Outside of my software engineering endeavors, I'm passionate about urbanism, transit, and photography, inspiring some of the projects I work on. I also enjoy traveling a lot, as well as rowing in the Hudson River.</p>
         </div>
     </div>
-    <h2>Education</h2>
-    {% for school in site.education %}
-    <div class="education">
-        <img src="images/{{ school.logo }}" class="logo">
+    <div>
         <div>
-            <h3>{{ school.name }}</h3>
-            <b>{{ school.start }} - {{ school.end }}</b>
-            {{ school.content }}
+            <h2>Education</h2>
+            {% include experience_list.html experiences=site.education %}
+        </div>
+        <div>
+            <h2>Experience</h2>
+            {% include experience_list.html experiences=site.experience %}
         </div>
     </div>
-    {% endfor %}
 </div>
