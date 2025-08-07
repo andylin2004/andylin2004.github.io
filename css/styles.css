@@ -323,11 +323,14 @@ h5 {
     align-self: center;
 }
 
-#experience-grid {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+@media only screen and (min-width: 800px) {
+    #experience-grid {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
 }
+
 
 #experience-grid > * {
     flex: 1;
