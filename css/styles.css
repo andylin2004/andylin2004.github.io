@@ -189,8 +189,7 @@ h5 {
         display: grid;
         grid-template-columns: repeat(22, 1fr);
         grid-template-rows: 48px 1fr;
-        height: auto;
-        min-height: 0px;
+        min-height: 68px;
         transition: all 0.4s;
     }
 
