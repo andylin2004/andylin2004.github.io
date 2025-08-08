@@ -319,7 +319,7 @@ h5 {
 .logo {
     width: 60px;
     height: auto;
-    align-self: center;
+    align-self: baseline;
 }
 
 @media only screen and (min-width: 800px) {
