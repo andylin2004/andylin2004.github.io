@@ -35,9 +35,15 @@
     <div id="bottom-bar">
         <p><i>Copyright Andy Lin <span id="copyright_year">2024</span></i></p>
         <div>
-            <a href="http://github.com/andylin2004"><img src="images/github-mark-white.png"></a>
-            <a href="https://mastodon.social/@andylin"><img src="images/mastodon-logo-white.svg"></a>
+            {% if site.github_username %}
+            <a href="http://github.com/{{ site.github_username }}"><img src="images/github-mark-white.png"></a>
+            {% endif %}
+            {% if site.linkedin_username %}
             <a href="https://linkedin.com/in/andylin2004"><img src="images/linkedin-logo.png"></a>
+            {% endif %}
+            {% if site.email %}
+            <a href="mailto:{{ site.email }}"><img src="images/mail.svg" class="invert"></a>
+            {% endif %}
         </div>
         <i><a href="privacy.html">Privacy Policy</a></i>
     </div>
