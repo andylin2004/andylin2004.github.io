@@ -6,3 +6,5 @@ logo: chamberlain.jpeg
 ---
 
 iOS Mobile Software Developer Intern
+
+myQ Residential iOS Team
