@@ -5,4 +5,4 @@ end: December 2025
 logo: nyu.png
 ---
 
-Bachelors of Science in Computer Science and Integrated Design and Media
+Bachelors of Science in Computer Science
