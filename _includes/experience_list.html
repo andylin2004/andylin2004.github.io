@@ -1,10 +1,16 @@
-{% for experience in include.experiences %}
+{% assign grouped_experiences = include.experiences | group_by: "name" %}
+{% for group in grouped_experiences %}
 <div class="experience">
-    <img src="images/{{ experience.logo }}" class="logo">
+    {% assign first = group.items | first %}
+    <img src="images/{{ first.logo }}" class="logo">
     <div>
-        <h3>{{ experience.name }}</h3>
-        <b>{{ experience.start }} - {{ experience.end }}</b>
-        {{ experience.content }}
+        <h3>{{ group.name }}</h3>
+        {% for experience in group.items %}
+        <div class="experience-role">
+            <b>{{ experience.start }} - {{ experience.end | default: "Present" }}</b>
+            {{ experience.content }}
+        </div>
+        {% endfor %}
     </div>
 </div>
 {% endfor %}
