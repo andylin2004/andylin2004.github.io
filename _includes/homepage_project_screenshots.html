@@ -1,0 +1,69 @@
+{% assign project = include.project %}
+
+{% if project.screenshots %}
+  {% assign has_landscape_screenshot = false %}
+  {% assign portrait_screenshot_count = 0 %}
+  {% for screenshot in project.screenshots %}
+    {% if screenshot.images %}
+      {% for image in screenshot.images %}
+        {% if image.orientation == "landscape" %}
+          {% assign has_landscape_screenshot = true %}
+        {% elsif image.orientation == "portrait" %}
+          {% assign portrait_screenshot_count = portrait_screenshot_count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    {% elsif screenshot.orientation == "landscape" %}
+      {% assign has_landscape_screenshot = true %}
+    {% elsif screenshot.orientation == "portrait" %}
+      {% assign portrait_screenshot_count = portrait_screenshot_count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign use_portrait_pair = false %}
+  {% if portrait_screenshot_count >= 2 %}
+    {% assign use_portrait_pair = true %}
+  {% endif %}
+
+  <div class="homepage_project_screenshots{% if has_landscape_screenshot and use_portrait_pair == false %} landscape{% endif %}">
+    {% assign shown_screenshots = 0 %}
+    {% for screenshot in project.screenshots %}
+      {% if use_portrait_pair %}
+        {% if screenshot.images %}
+          {% for image in screenshot.images %}
+            {% if shown_screenshots < 2 and image.orientation == "portrait" %}
+              <img src="{{ image.src }}" alt="{{ image.alt | default: project.title }}" {% if image.class %}class="{{ image.class }}"{% endif %}>
+              {% assign shown_screenshots = shown_screenshots | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        {% elsif shown_screenshots < 2 and screenshot.orientation == "portrait" %}
+          <img src="{{ screenshot.src }}" alt="{{ screenshot.alt | default: project.title }}" {% if screenshot.class %}class="{{ screenshot.class }}"{% endif %}>
+          {% assign shown_screenshots = shown_screenshots | plus: 1 %}
+        {% endif %}
+      {% elsif has_landscape_screenshot %}
+        {% if screenshot.images %}
+          {% for image in screenshot.images %}
+            {% if shown_screenshots == 0 and image.orientation == "landscape" %}
+              <img src="{{ image.src }}" alt="{{ image.alt | default: project.title }}" {% if image.class %}class="{{ image.class }}"{% endif %}>
+              {% assign shown_screenshots = shown_screenshots | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        {% elsif shown_screenshots == 0 and screenshot.orientation == "landscape" %}
+          <img src="{{ screenshot.src }}" alt="{{ screenshot.alt | default: project.title }}" {% if screenshot.class %}class="{{ screenshot.class }}"{% endif %}>
+          {% assign shown_screenshots = shown_screenshots | plus: 1 %}
+        {% endif %}
+      {% elsif shown_screenshots < 2 %}
+        {% if screenshot.images %}
+          {% for image in screenshot.images %}
+            {% if shown_screenshots < 2 %}
+              <img src="{{ image.src }}" alt="{{ image.alt | default: project.title }}" {% if image.class %}class="{{ image.class }}"{% endif %}>
+              {% assign shown_screenshots = shown_screenshots | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          <img src="{{ screenshot.src }}" alt="{{ screenshot.alt | default: project.title }}" {% if screenshot.class %}class="{{ screenshot.class }}"{% endif %}>
+          {% assign shown_screenshots = shown_screenshots | plus: 1 %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

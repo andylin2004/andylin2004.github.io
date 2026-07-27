@@ -8,5 +8,6 @@
       <h4>{{ project.title }}</h4>
     {% endif %}
     {{ project.content }}
+    {% include project_page_screenshots.html project=project %}
   </div>
 {% endfor %}

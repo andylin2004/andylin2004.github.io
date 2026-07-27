@@ -10,36 +10,28 @@ layout: default
                 <h2>Hi there! I'm Andy Lin.</h2>
                 <h4>Experience obsessed iOS Software Engineer</h4>
             </div>
-            <div>
-                <p>Software engineering is my art form, where code is my paintbrush and device screens are my canvas to
-                    bring ideas to life. I love building and creating interactive software that people can engage with
-                    and react to, using feedback to refine and enhance my work. I have independently created and
-                    maintained several iOS apps available on the App Store. Outside of my software engineering
-                    endeavors, I'm passionate about urbanism, transit, and photography, inspiring some of the projects I
-                    work on. I also enjoy traveling a lot, as well as rowing in the Hudson River.</p>
-            </div>
         </div>
     </div>
     <div id="experience-grid">
         <div>
-            <h2>Education</h2>
-            {% include experience_list.html experiences=site.education %}
-        </div>
-        <div>
-            <h2>Experience</h2>
-            {% include experience_list.html experiences=site.experience %}
-        </div>
-        <div>
             <h2>Projects</h2>
-            {% for project in site.projects limit:3 %}
-            <div class="project_item">
-                {% if project.link %}
-                <a href="{{ project.link }}">
+            {% assign projects_with_screenshots = site.projects | where_exp: "project", "project.screenshots" %}
+            {% for project in projects_with_screenshots limit:3 %}
+            <div class="project_item homepage_project">
+                <div>
+                    {% if project.link %}
+                    <a href="{{ project.link }}">
+                        <h3>{{ project.title }}</h3>
+                    </a>
+                    {% else %}
                     <h3>{{ project.title }}</h3>
-                </a>
-                {% else %}
-                <h3>{{ project.title }}</h3>
-                {% endif %}
+                    {% endif %}
+                    {{ project.content }}
+                </div>
+                {% include homepage_project_screenshots.html project=project %}
+                <div class="homepage_project_page_screenshots">
+                    {% include project_page_screenshots.html project=project variant="homepage" %}
+                </div>
             </div>
             {% endfor %}
             <a href="projects.html">See more...</a>

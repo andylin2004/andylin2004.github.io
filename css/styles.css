@@ -1,7 +1,9 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
-    overflow-x: hidden; /* allow vertical scrolling */
+    overflow-x: hidden;
+    /* allow vertical scrolling */
 }
 
 body {
@@ -48,7 +50,7 @@ body h4 {
     padding-top: 10px;
     padding-bottom: 10px;
     display: grid;
-    grid-template-columns: 3fr 1fr; 
+    grid-template-columns: 3fr 1fr;
 }
 
 #navbar * {
@@ -86,12 +88,12 @@ body h4 {
     margin-left: -15px;
 }
 
-#intro > *:not(img) {
+#intro>*:not(img) {
     margin-left: 15px;
     margin-right: 15px;
 }
 
-#intro > img {
+#intro>img {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: auto;
@@ -102,6 +104,24 @@ body h4 {
 
 .nobreak {
     display: inline-flex;
+}
+
+.resume-button {
+    display: block;
+    width: fit-content;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 16px;
+    border-radius: 6px;
+    background-color: #304D6D;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.resume-button:hover {
+    background-color: #1f354d;
 }
 
 #main-ctn {
@@ -171,7 +191,7 @@ h5 {
 
 @media only screen and (max-width: 500px) {
     #intro {
-        display:inline;
+        display: inline;
     }
 
     #intro * {
@@ -179,7 +199,7 @@ h5 {
         margin-right: 0px;
     }
 
-    #intro > img {
+    #intro>img {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
@@ -214,18 +234,18 @@ h5 {
         grid-column: 1;
     }
 
-    #navbar #show-menu:has(#show-menu-btn) ~ #navbar-links {
+    #navbar #show-menu:has(#show-menu-btn)~#navbar-links {
         visibility: hidden;
         opacity: 0;
         width: 0px;
         height: 0px;
     }
 
-    #navbar #show-menu:has(#show-menu-btn) ~ #navbar-links:not(.suppress-animations) {
+    #navbar #show-menu:has(#show-menu-btn)~#navbar-links:not(.suppress-animations) {
         transition: all 0.4s;
     }
 
-    #navbar #show-menu:has(#show-menu-btn:checked) ~ #navbar-links:not(.suppress-animations) {
+    #navbar #show-menu:has(#show-menu-btn:checked)~#navbar-links:not(.suppress-animations) {
         visibility: visible;
         opacity: 1;
     }
@@ -243,7 +263,7 @@ h5 {
         z-index: 1;
     }
 
-    #menu-lines > .line {
+    #menu-lines>.line {
         height: 2px;
         width: 100%;
         background-color: white;
@@ -256,11 +276,11 @@ h5 {
         margin-left: 0px;
     }
 
-    #show-menu #show-menu-btn:checked ~ #menu-lines > .line.line1 {
+    #show-menu #show-menu-btn:checked~#menu-lines>.line.line1 {
         transform: rotate(45deg) translateY(5px) translateX(2px);
     }
 
-    #show-menu #show-menu-btn:checked ~ #menu-lines > .line.line2 {
+    #show-menu #show-menu-btn:checked~#menu-lines>.line.line2 {
         transform: rotate(-45deg) translateY(-5px) translateX(2px);
     }
 
@@ -301,7 +321,7 @@ h5 {
 }
 
 @media only screen and (max-width: 600px) {
-    ul > li > b {
+    ul>li>b {
         display: block;
     }
 }
@@ -309,6 +329,49 @@ h5 {
 .project_item {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.homepage_project {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) fit-content(50%);
+    gap: 28px;
+    align-items: start;
+}
+
+.homepage_project_screenshots {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    justify-content: flex-end;
+    justify-self: end;
+    width: max-content;
+    max-width: 100%;
+}
+
+.homepage_project_screenshots img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: 400px;
+    object-fit: contain;
+}
+
+.homepage_project_screenshots.landscape {
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+
+.homepage_project_screenshots.landscape img {
+    width: 100%;
+    height: auto;
+}
+
+.homepage_project_screenshots img.roundedcorner {
+    clip-path: inset(0 round 20px);
+}
+
+.homepage_project_page_screenshots {
+    display: none;
 }
 
 .experience {
@@ -332,11 +395,37 @@ h5 {
 }
 
 
-#experience-grid > * {
+#experience-grid>* {
     flex: 1;
 }
 
+@media only screen and (max-width: 900px) {
+    .homepage_project {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .homepage_project_screenshots {
+        display: none;
+        justify-content: stretch;
+        max-width: 100%;
+    }
+
+    .homepage_project_page_screenshots {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .homepage_project_page_screenshots img {
+        max-width: 100%;
+        height: auto;
+        min-height: 400px;
+    }
+}
+
 .invert {
-    -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+    -webkit-filter: invert(100%);
+    /* safari 6.0 - 9.0 */
     filter: invert(100%);
 }
